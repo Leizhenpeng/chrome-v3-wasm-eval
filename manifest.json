@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "WASM JS Eval",
+    "version": "1.0",
+    "description": "Evaluate JavaScript using Duktape/QuickJS in a Chrome extension",
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    }
+}

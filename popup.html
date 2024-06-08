@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WASM JS Eval</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="popup.js" defer></script>
+    <!-- <script src="duktapeEval.js" defer></script> -->
+    <script src="script/quickjsEval.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Eval In Chorme V3</h1>
+        <select id="examples">
+            <option value="">-- Select an example --</option>
+            <option value="2 + 2">Simple Math: 2 + 2</option>
+            <option value="'Hello, ' + 'World!'">String Operation: 'Hello, ' + 'World!'</option>
+            <option value="[1, 2, 3].map(x => x * 2)">Array Operation: [1, 2, 3].map(x => x * 2)</option>
+            <option value="({a: 1, b: 2}).a">Object Property Access: ({a: 1, b: 2}).a</option>
+            <option value="function add(a, b) { return a + b; } add(3, 4)">Function Definition and Call: function add(a, b) { return a + b;
+                } add(3, 4)</option>
+        </select>
+        <textarea id="code" placeholder="Enter JavaScript code here..."></textarea>
+        <button id="evaluate">Evaluate</button>
+        <pre id="output"></pre>
+    </div>
+</body>
+
+</html>
